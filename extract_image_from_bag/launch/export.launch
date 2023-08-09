@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="rosbag" type="play" name="rosbag" required="true" args="/media/ivan/Elements/yimin/0812/2022-08-12-15-04-44.bag"/>
+  <node name="extract" pkg="image_view" type="extract_images" respawn="false" required="true" output="screen" cwd="ROS_HOME">
+    <remap from="image" to="/awe_ros/huidian/data"/>
+  </node>
+</launch>
